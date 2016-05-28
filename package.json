@@ -1,7 +1,7 @@
 {
   "name": "postling",
   "description": "Remote procedure call system to communicate with iframes",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Stefan Dühring | Autarc <autarc@gmail.com>",
   "bugs": {
     "url": "https://github.com/Autarc/postling/issues"
