@@ -30,5 +30,5 @@ export function parseUrl (url) {
  * @return {[type]} [description]
  */
 export function getId () {
-  return Math.random().toString(36).substr(2, 10)
+  return Math.random().toString(36).substr(2, 10) + Math.random().toString(36).substr(2, 10)
 }
