@@ -123,7 +123,7 @@ export default class Postling {
           resolve(response)
         }
       }
-      target.postMessage('postling:' + JSON.stringify({ type, id, payload }), origin)
+      target && target.postMessage('postling:' + JSON.stringify({ type, id, payload }), origin)
     })
   }
 
@@ -138,7 +138,7 @@ export default class Postling {
       const { type, id, payload } = JSON.parse(data.replace('postling:', ''))
 
       if (type === RESPONSE) {
-        return this.pending[id](payload.error, payload.result)
+        return this.pending[id] && this.pending[id](payload.error, payload.result)
       }
 
       const { name, args } = payload
